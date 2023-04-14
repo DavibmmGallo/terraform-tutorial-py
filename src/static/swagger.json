@@ -1,0 +1,42 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Time API",
+      "description": "API for retrieving the current time"
+    },
+    "basePath": "/",
+    "schemes": [
+      "http",
+      "https"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/time": {
+        "get": {
+          "summary": "Get the current time",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "time": {
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2023-04-14 15:30:00"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
